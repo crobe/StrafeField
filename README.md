@@ -1,5 +1,5 @@
 # StrafeTable
-Modified version of [The Round Table (v2.1.2)](https://www.digitalcombatsimulator.com/en/files/3306210/). This modified version is meant for private usage on Strafe Haven DCS server - not for redistribution!
+Modified version of [Operation: Clear Field (v1.2.3)](https://www.digitalcombatsimulator.com/en/files/3306039/). This modified version is meant for private usage on Strafe Haven DCS server - not for redistribution!
 
 # Useful Links
 **DCS Mission Scripting**  
