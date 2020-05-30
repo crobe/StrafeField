@@ -22,8 +22,8 @@ function SEF_BLUEDISPATCHERON()
 	BLUEA2ADispatcher:SetDefaultCapLimit( 1 )
 	BLUEA2ADispatcher:SetDefaultTakeoffInAirAltitude(3000)
 	
-	BLUEA2ADispatcher:SetEngageRadius( 200000 ) --If we're spawning BLUE CAP we want them to engage at long range and actually help. -Crobemeister
-	BLUEA2ADispatcher:SetDisengageRadius( 260000 )
+	BLUEA2ADispatcher:SetEngageRadius( 80000 ) 
+	BLUEA2ADispatcher:SetDisengageRadius( 90000 )
 	
 	--trigger.action.outText("Blue Air Dispatcher Is Now Enabled", 15)	
 end	
@@ -129,7 +129,7 @@ function SEF_REDDISPATCHERON()
 	REDDetectionSetGroup:FilterStart()
 	REDDetection = DETECTION_AREAS:New( REDDetectionSetGroup, 30000 )
 	REDA2ADispatcher = AI_A2A_DISPATCHER:New( REDDetection )
-	REDA2ADispatcher:SetTacticalDisplay( true )
+	REDA2ADispatcher:SetTacticalDisplay( false )
 	RedBorderZone = ZONE_POLYGON:New( "RED Border", GROUP:FindByName( "RED Border" ) )
 	REDA2ADispatcher:SetBorderZone( RedBorderZone )
 
@@ -138,8 +138,8 @@ function SEF_REDDISPATCHERON()
 	REDA2ADispatcher:SetDefaultCapLimit( 1 )
 	REDA2ADispatcher:SetDefaultTakeoffInAirAltitude(3000)
 
-	REDA2ADispatcher:SetEngageRadius( 60000 )	--Engage range to 60Km. Keeps multiple CAP groups from engaging players. -Crobemeister
-	REDA2ADispatcher:SetDisengageRadius( 80000 )
+	REDA2ADispatcher:SetEngageRadius( 80000 )	
+	REDA2ADispatcher:SetDisengageRadius( 90000 )
 	--REDA2ADispatcher:SetGciRadius( 100000 )
 	
 	--trigger.action.outText("Red Air Dispatcher Is Now Enabled", 15)
@@ -213,7 +213,7 @@ function SEF_REDSQUADRONSMULTIPLAYER()
 
 
 	--////SQUADRON OVERHEAD (1.0-1.5)
-	REDA2ADispatcher:SetSquadronOverhead( "Alpha", 0.5) --Overhead adjusted to 0.5. Enemy GCI will only spawn extra units at half the numbers of detected BLUE aircraft. -Crobemeister
+	REDA2ADispatcher:SetSquadronOverhead( "Alpha", 0.5) 
 	REDA2ADispatcher:SetSquadronOverhead( "Beta", 0.5)
 	REDA2ADispatcher:SetSquadronOverhead( "Gamma", 0.5)
 	REDA2ADispatcher:SetSquadronOverhead( "Delta", 0.5)
@@ -221,12 +221,12 @@ function SEF_REDSQUADRONSMULTIPLAYER()
 	REDA2ADispatcher:SetSquadronOverhead( "Omicron", 0.5)
 
 	--////SQUADRON GROUPING
-	REDA2ADispatcher:SetSquadronGrouping( "Alpha", 2 )
-	REDA2ADispatcher:SetSquadronGrouping( "Beta", 2 )
-	REDA2ADispatcher:SetSquadronGrouping( "Gamma", 2 )
-	REDA2ADispatcher:SetSquadronGrouping( "Delta", 2 )
-	REDA2ADispatcher:SetSquadronGrouping( "Theta", 2 )
-	REDA2ADispatcher:SetSquadronGrouping( "Omicron", 2 )
+	--REDA2ADispatcher:SetSquadronGrouping( "Alpha", 2 )
+	--REDA2ADispatcher:SetSquadronGrouping( "Beta", 2 )
+	--REDA2ADispatcher:SetSquadronGrouping( "Gamma", 2 )
+	--REDA2ADispatcher:SetSquadronGrouping( "Delta", 2 )
+	--REDA2ADispatcher:SetSquadronGrouping( "Theta", 2 )
+	--REDA2ADispatcher:SetSquadronGrouping( "Omicron", 2 )
 
 	--////TAKEOFF	
 	--REDA2ADispatcher:SetSquadronTakeoffFromParkingHot( "Alpha" )
@@ -267,7 +267,7 @@ function SEF_REDSQUADRONSMULTIPLAYER()
 	CAPZoneRed4 = ZONE:New( "CAP Zone RED 4" )
 	CAPZoneRed5 = ZONE:New( "CAP Zone RED Kuznetsov" )
 	--CAPZoneRedCarrier = ZONE_GROUP:New("CAP Zone Black Sea Fleet", GROUP:FindByName( "CV 1143.5 Admiral Kuznetsov" ), 75000)
-	CAPZoneRed6 = ZONE_POLYGON:New( "CAP Zone RED 6", GROUP:FindByName( "CAP Zone RED 6" ) )
+	CAPZoneRed6 = ZONE:New( "CAP Zone RED 6" )
 
 	-- ZONE 1 Gudauta 			- Alpha
 	-- ZONE 2 Nalchik 			- Beta
@@ -277,25 +277,26 @@ function SEF_REDSQUADRONSMULTIPLAYER()
 	-- ZONE 6 Mineralnye-Vody 	- Omicron
 	
 	--Timing Originally 300/750
-
+	
 	--ZONE 1 / Alpha / Gudauta
-	REDA2ADispatcher:SetSquadronCap( "Alpha", CAPZoneRed1, 1000, 11000, 750, 900, 800, 1200, "BARO" )  --CapInterval increased to 20-30 min. This leaves a reasonable amount of enemy aircraft and ensures there is time to destroy ground targets. -Crobemeister
-	REDA2ADispatcher:SetSquadronCapInterval( "Alpha", 1, 1200, 1800, 1 )
+	--REDA2ADispatcher:SetSquadronCap( "Alpha", CAPZoneRed1, 1000, 11000, 750, 900, 800, 1200, "BARO" )  
+	--REDA2ADispatcher:SetSquadronCapInterval( "Alpha", 1, 30, 31, 1 )
 	--ZONE 2 / Beta / Nalchik
-	REDA2ADispatcher:SetSquadronCap( "Beta", CAPZoneRed2, 4000, 11000, 750, 900, 800, 1200, "BARO" )
-	REDA2ADispatcher:SetSquadronCapInterval( "Beta", 1, 1200, 1800, 1 )
+	--REDA2ADispatcher:SetSquadronCap( "Beta", CAPZoneRed2, 4000, 11000, 750, 900, 800, 1200, "BARO" )
+	--REDA2ADispatcher:SetSquadronCapInterval( "Beta", 1, 30, 31, 1 )
 	--ZONE 3 / Gamma / Beslan
-	REDA2ADispatcher:SetSquadronCap( "Gamma", CAPZoneRed3, 4000, 11000, 750, 900, 800, 1200, "BARO" )
-	REDA2ADispatcher:SetSquadronCapInterval( "Gamma", 1, 1200, 1800, 1 )  
+	--REDA2ADispatcher:SetSquadronCap( "Gamma", CAPZoneRed3, 4000, 11000, 750, 900, 800, 1200, "BARO" )
+	--REDA2ADispatcher:SetSquadronCapInterval( "Gamma", 1, 30, 31, 1 )  
 	--ZONE 4 / Delta / Sochi
-	REDA2ADispatcher:SetSquadronCap( "Delta", CAPZoneRed4, 1000, 11000, 750, 900, 800, 1200, "BARO" )
-	REDA2ADispatcher:SetSquadronCapInterval( "Delta", 1, 1200, 1800, 1 )
+	--REDA2ADispatcher:SetSquadronCap( "Delta", CAPZoneRed4, 1000, 11000, 750, 900, 800, 1200, "BARO" )
+	--REDA2ADispatcher:SetSquadronCapInterval( "Delta", 1, 30, 31, 1 )
 	--ZONE 5 / Theta / Admiral Kuznetsov
-	REDA2ADispatcher:SetSquadronCap( "Theta", CAPZoneRed5, 1000, 11000, 750, 900, 800, 1200, "BARO" )
-	REDA2ADispatcher:SetSquadronCapInterval( "Theta", 1, 1200, 1800, 1 )
+	--REDA2ADispatcher:SetSquadronCap( "Theta", CAPZoneRed5, 1000, 11000, 750, 900, 800, 1200, "BARO" )
+	--REDA2ADispatcher:SetSquadronCapInterval( "Theta", 1, 30, 31, 1 )
 	--ZONE 6 / Omicron / Mineralnye-Vody
-	REDA2ADispatcher:SetSquadronCap( "Omicron", CAPZoneRed6, 4000, 11000, 750, 900, 800, 1200, "BARO" )
-	REDA2ADispatcher:SetSquadronCapInterval( "Omicron", 1, 1200, 1800, 1 )	
+	--REDA2ADispatcher:SetSquadronCap( "Omicron", CAPZoneRed6, 4000, 11000, 750, 900, 800, 1200, "BARO" )
+	--REDA2ADispatcher:SetSquadronCapInterval( "Omicron", 1, 30, 31, 1 )
+	
 end
 
 function SEF_REDSQUADRONSSINGLEPLAYER()
@@ -535,6 +536,7 @@ function SEF_AIRFIELDPERIMETERZONES()
 	NalchikPerimeterZone 		= ZONE:New("Nalchik Perimeter")
 	BeslanPerimeterZone 		= ZONE:New("Beslan Perimeter")
 	--KuznetsovPerimeterZone	= CAPZoneRedCarrier	
+	ServerWide 					= ZONE:New("Server Perimeter")
 end
 
 function SEF_AIRFIELDPERIMETERCLIENTS()
@@ -547,7 +549,8 @@ function SEF_AIRFIELDPERIMETERZONECLIENTSCANNER(Timeloop, time)
 	SochiPerimeterCount 		= 0
 	NalchikPerimeterCount 		= 0
 	BeslanPerimeterCount 		= 0
-	KuznetsovPerimeterCount		= 0
+	--KuznetsovPerimeterCount		= 0
+	ServerCount					= 0
 	
 	--////Count Clients Inside Airfield Perimeter Zones
 	SET_AIRFIELDPERIMETERCLIENTS:ForEachClientInZone(GudautaPerimeterZone, function ( GroupObject )
@@ -566,8 +569,12 @@ function SEF_AIRFIELDPERIMETERZONECLIENTSCANNER(Timeloop, time)
 		BeslanPerimeterCount = BeslanPerimeterCount + 1
 		end
 	)
-	SET_AIRFIELDPERIMETERCLIENTS:ForEachClientInZone(CAPZoneRedCarrier, function ( GroupObject )
-		KuznetsovPerimeterCount = KuznetsovPerimeterCount + 1
+	--SET_AIRFIELDPERIMETERCLIENTS:ForEachClientInZone(CAPZoneRedCarrier, function ( GroupObject )
+		--KuznetsovPerimeterCount = KuznetsovPerimeterCount + 1
+		--end
+	--)
+	SET_AIRFIELDPERIMETERCLIENTS:ForEachClientInZone(ServerWide, function ( GroupObject )
+		ServerCount = ServerCount + 1
 		end
 	)
 	
@@ -604,12 +611,47 @@ function SEF_AIRFIELDPERIMETERZONECLIENTSCANNER(Timeloop, time)
 		REDA2ADispatcher:SetSquadron( "Gamma", AIRBASE.Caucasus.Beslan, { "SQ RUS Su-27", "SQ RUS Su-30", "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-23MLD" } )	
 	end
 	--////BLACK SEA FLEET
-	if ( KuznetsovPerimeterCount > 0 ) then		
-		KuznetsovStatus = "CV 1143.5 Admiral Kuznetsov\nAirspace Is Being Contested By The Allies\n"		
-		REDA2ADispatcher:SetSquadron( "Theta", AIRBASE.Caucasus.Gelendzhik, { "SQ RUS Su-33" } )	
+	--if ( KuznetsovPerimeterCount > 0 ) then		
+		--KuznetsovStatus = "CV 1143.5 Admiral Kuznetsov\nAirspace Is Being Contested By The Allies\n"		
+		--REDA2ADispatcher:SetSquadron( "Theta", AIRBASE.Caucasus.Gelendzhik, { "SQ RUS Su-33" } )	
+	--else
+		--KuznetsovStatus = "CV 1143.5 Admiral Kuznetsov\nAirspace Is Controlled By Russia"
+		--REDA2ADispatcher:SetSquadron( "Theta", "CV 1143.5 Admiral Kuznetsov", { "SQ RUS Su-33 Kuznetsov" } )	
+	--end
+	--///Server Count
+	if ( ServerCount > 5 ) then
+		REDA2ADispatcher:SetSquadronGrouping( "Gamma", 2 )
+		REDA2ADispatcher:SetSquadronGrouping( "Delta", 2 )
+		REDA2ADispatcher:SetSquadronGrouping( "Omicron", 2 )
+		
+		--ZONE 3 / Gamma / Beslan
+		REDA2ADispatcher:SetSquadronCap( "Gamma", CAPZoneRed3, 4000, 11000, 750, 900, 800, 1200, "BARO" )
+		REDA2ADispatcher:SetSquadronCapInterval( "Gamma", 1, 1000, 1500, 1 )  
+		--ZONE 4 / Delta / Sochi
+		REDA2ADispatcher:SetSquadronCap( "Delta", CAPZoneRed4, 1000, 11000, 750, 900, 800, 1200, "BARO" )
+		REDA2ADispatcher:SetSquadronCapInterval( "Delta", 1, 1000, 1500, 1 )
+		--ZONE 6 / Omicron / Mineralnye-Vody
+		REDA2ADispatcher:SetSquadronCap( "Omicron", CAPZoneRed6, 4000, 11000, 750, 900, 800, 1200, "BARO" )
+		REDA2ADispatcher:SetSquadronCapInterval( "Omicron", 1, 1000, 1500, 1 )
+		--trigger.action.outText("Client Count ="..ServerCount, 15)
 	else
-		KuznetsovStatus = "CV 1143.5 Admiral Kuznetsov\nAirspace Is Controlled By Russia"
-		REDA2ADispatcher:SetSquadron( "Theta", "CV 1143.5 Admiral Kuznetsov", { "SQ RUS Su-33 Kuznetsov" } )	
+		REDA2ADispatcher:SetSquadronGrouping( "Alpha", 2 )
+		REDA2ADispatcher:SetSquadronGrouping( "Beta", 2 )
+		REDA2ADispatcher:SetSquadronGrouping( "Gamma", 0 )
+		REDA2ADispatcher:SetSquadronGrouping( "Delta", 0 )
+		REDA2ADispatcher:SetSquadronGrouping( "Theta", 2 )
+		REDA2ADispatcher:SetSquadronGrouping( "Omicron", 0 )
+		
+		--ZONE 1 / Alpha / Gudauta
+		REDA2ADispatcher:SetSquadronCap( "Alpha", CAPZoneRed1, 1000, 11000, 750, 900, 800, 1200, "BARO" )  
+		REDA2ADispatcher:SetSquadronCapInterval( "Alpha", 1, 1000, 1500, 1 )
+		--ZONE 2 / Beta / Nalchik
+		REDA2ADispatcher:SetSquadronCap( "Beta", CAPZoneRed2, 4000, 11000, 750, 900, 800, 1200, "BARO" )
+		REDA2ADispatcher:SetSquadronCapInterval( "Beta", 1, 1000, 1500, 1 )
+		--ZONE 5 / Theta / Admiral Kuznetsov
+		REDA2ADispatcher:SetSquadronCap( "Theta", CAPZoneRed5, 1000, 11000, 750, 900, 800, 1200, "BARO" )
+		REDA2ADispatcher:SetSquadronCapInterval( "Theta", 1, 1000, 1500, 1 )
+		--trigger.action.outText("Client Count ="..ServerCount, 15)
 	end
 	
 	--trigger.action.outText("Airfield Status Report".."\n\n"..GudautaStatus.."\n"..SochiStatus.."\n"..NalchikStatus.."\n"..BeslanStatus.."\n"..KuznetsovStatus, 10)
@@ -621,6 +663,8 @@ end
 	--////MAIN
 			
 	--////GET THE GAME MODE SETUP (FLAG 10000 IN MISSION EDITOR TRIGGERS, 0 FOR MULTIPLAYER, 1 FOR SINGLEPLAYER)
+	
+	
 	GameMode = trigger.misc.getUserFlag(10000)	
 	
 	SEF_REDDISPATCHERON()
@@ -638,6 +682,7 @@ end
 	timer.scheduleFunction(SEF_REDDEFENCENETWORK, 53, timer.getTime() + 3)
 	--////Airfield Perimeter scanner	
 	timer.scheduleFunction(SEF_AIRFIELDPERIMETERZONECLIENTSCANNER, 53, timer.getTime() + 21)
+	
 	--SEF_CleanUpAirports()
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
