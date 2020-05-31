@@ -22,103 +22,103 @@ function SEF_BLUEDISPATCHERON()
 	BLUEA2ADispatcher:SetDefaultCapLimit( 1 )
 	BLUEA2ADispatcher:SetDefaultTakeoffInAirAltitude(3000)
 	
-	BLUEA2ADispatcher:SetEngageRadius( 60000 )
-	BLUEA2ADispatcher:SetDisengageRadius( 80000 )
+	BLUEA2ADispatcher:SetEngageRadius( 80000 ) 
+	BLUEA2ADispatcher:SetDisengageRadius( 90000 )
 	
 	--trigger.action.outText("Blue Air Dispatcher Is Now Enabled", 15)	
 end	
 
---///function SEF_KutaisiCAP()
+function SEF_KutaisiCAP()
 		
-	--///if ( GameMode == 0 ) then
+	if ( GameMode == 0 ) then
 		--////KUTAISI CAP F-16's MULTIPLAYER SETTINGS
-		--//BLUEA2ADispatcher:SetSquadron( "Rogue", AIRBASE.Caucasus.Kutaisi, { "SQ BLUE F-16C" } )
-		--//BLUEA2ADispatcher:SetSquadronOverhead( "Rogue", 1 )
-		--//BLUEA2ADispatcher:SetSquadronGrouping( "Rogue", 2 )
-		--//BLUEA2ADispatcher:SetSquadronTakeoffInAir( "Rogue" )
-		--//BLUEA2ADispatcher:SetSquadronLandingAtRunway( "Rogue" )
+		BLUEA2ADispatcher:SetSquadron( "Rogue", AIRBASE.Caucasus.Kutaisi, { "SQ BLUE F-16C" } )
+		BLUEA2ADispatcher:SetSquadronOverhead( "Rogue", 1 )
+		BLUEA2ADispatcher:SetSquadronGrouping( "Rogue", 2 )
+		BLUEA2ADispatcher:SetSquadronTakeoffInAir( "Rogue" )
+		BLUEA2ADispatcher:SetSquadronLandingAtRunway( "Rogue" )
 		
-		--//CAPZoneBlue1 = ZONE:New( "CAP Zone BLUE 1")
-		--//BLUEA2ADispatcher:SetSquadronCap( "Rogue", CAPZoneBlue1, 4000, 11000, 743, 867, 800, 1200, "BARO" )
-		--//BLUEA2ADispatcher:SetSquadronCapInterval( "Rogue", 1, 150, 600, 1 )
-	--//else
+		CAPZoneBlue1 = ZONE:New( "CAP Zone BLUE 1")
+		BLUEA2ADispatcher:SetSquadronCap( "Rogue", CAPZoneBlue1, 4000, 11000, 743, 867, 800, 1200, "BARO" )
+		BLUEA2ADispatcher:SetSquadronCapInterval( "Rogue", 1, 150, 600, 1 )
+	else
 		--////KUTAISI CAP F-16's SINGLEPLAYER SETTINGS
-		--//BLUEA2ADispatcher:SetSquadron( "Rogue", AIRBASE.Caucasus.Kutaisi, { "SQ BLUE F-16C" } )
-		--//BLUEA2ADispatcher:SetSquadronOverhead( "Rogue", 1 )
-		--//BLUEA2ADispatcher:SetSquadronGrouping( "Rogue", 2 )
-		--//BLUEA2ADispatcher:SetSquadronTakeoffFromParkingHot( "Rogue" )
-		--//BLUEA2ADispatcher:SetSquadronLandingAtRunway( "Rogue" )
+		BLUEA2ADispatcher:SetSquadron( "Rogue", AIRBASE.Caucasus.Kutaisi, { "SQ BLUE F-16C" } )
+		BLUEA2ADispatcher:SetSquadronOverhead( "Rogue", 1 )
+		BLUEA2ADispatcher:SetSquadronGrouping( "Rogue", 2 )
+		BLUEA2ADispatcher:SetSquadronTakeoffFromParkingHot( "Rogue" )
+		BLUEA2ADispatcher:SetSquadronLandingAtRunway( "Rogue" )
 		
-		--//CAPZoneBlue1 = ZONE:New( "CAP Zone BLUE 1")
-		--//BLUEA2ADispatcher:SetSquadronCap( "Rogue", CAPZoneBlue1, 4000, 11000, 743, 867, 800, 1200, "BARO" )
-		--//BLUEA2ADispatcher:SetSquadronCapInterval( "Rogue", 1, 150, 600, 1 )
-	--//end
+		CAPZoneBlue1 = ZONE:New( "CAP Zone BLUE 1")
+		BLUEA2ADispatcher:SetSquadronCap( "Rogue", CAPZoneBlue1, 4000, 11000, 743, 867, 800, 1200, "BARO" )
+		BLUEA2ADispatcher:SetSquadronCapInterval( "Rogue", 1, 150, 600, 1 )
+	end
 	
-	--//trigger.action.outText("Kutaisi Vipers Are Now Enabled", 15)
-	--//missionCommands.removeItemForCoalition(coalition.side.BLUE, {[1] = "Clear Field Options", [2] = "Clear Field CAP Options", [3] = "Enable Kutaisi Vipers"})
---//end	
+	trigger.action.outText("Kutaisi Vipers Are Now Enabled", 15)
+	missionCommands.removeItemForCoalition(coalition.side.BLUE, {[1] = "Clear Field Options", [2] = "Clear Field CAP Options", [3] = "Enable Kutaisi Vipers"})
+end	
 
---//function SEF_FleetTomcats()	
+function SEF_FleetTomcats()	
 		
-	--//if ( GameMode == 0 ) then
+	if ( GameMode == 0 ) then
 		--////CARRIER GROUP TOMCATS MULTIPLAYER SETTINGS
-		--//BLUEA2ADispatcher:SetSquadron( "Tomcat", "CVN-74 John C. Stennis", { "SQ BLUE F-14B" } )
-		--//BLUEA2ADispatcher:SetSquadronOverhead( "Tomcat", 1 )
-		--//BLUEA2ADispatcher:SetSquadronGrouping( "Tomcat", 2 )
-		--//BLUEA2ADispatcher:SetSquadronTakeoffInAir( "Tomcat" )
-		--//BLUEA2ADispatcher:SetSquadronLandingAtRunway( "Tomcat" )
+		BLUEA2ADispatcher:SetSquadron( "Tomcat", "CVN-74 John C. Stennis", { "SQ BLUE F-14B" } )
+		BLUEA2ADispatcher:SetSquadronOverhead( "Tomcat", 1 )
+		BLUEA2ADispatcher:SetSquadronGrouping( "Tomcat", 2 )
+		BLUEA2ADispatcher:SetSquadronTakeoffInAir( "Tomcat" )
+		BLUEA2ADispatcher:SetSquadronLandingAtRunway( "Tomcat" )
 			
-		--//CAPZoneBlueCarrier = ZONE_GROUP:New("CAP Zone Carrier", GROUP:FindByName( "CVN-74 John C. Stennis" ), 20000)
-		--//BLUEA2ADispatcher:SetSquadronCap( "Tomcat", CAPZoneBlueCarrier, 3000, 11000, 768, 905, 800, 1200, "BARO" )
-		--//BLUEA2ADispatcher:SetSquadronCapInterval( "Tomcat", 1, 150, 600, 1 )
-	--//else
+		CAPZoneBlueCarrier = ZONE_GROUP:New("CAP Zone Carrier", GROUP:FindByName( "CVN-74 John C. Stennis" ), 20000)
+		BLUEA2ADispatcher:SetSquadronCap( "Tomcat", CAPZoneBlueCarrier, 3000, 11000, 768, 905, 800, 1200, "BARO" )
+		BLUEA2ADispatcher:SetSquadronCapInterval( "Tomcat", 1, 150, 600, 1 )
+	else
 		--////CARRIER GROUP TOMCATS SINGLEPLAYER SETTINGS
-		--//BLUEA2ADispatcher:SetSquadron( "Tomcat", "CVN-74 John C. Stennis", { "SQ BLUE F-14B" } )
-		--//BLUEA2ADispatcher:SetSquadronOverhead( "Tomcat", 1 )
-		--//BLUEA2ADispatcher:SetSquadronGrouping( "Tomcat", 2 )
-		--//BLUEA2ADispatcher:SetSquadronTakeoffFromParkingHot( "Tomcat" )		
-		--//BLUEA2ADispatcher:SetSquadronLandingAtRunway( "Tomcat" )
+		BLUEA2ADispatcher:SetSquadron( "Tomcat", "CVN-74 John C. Stennis", { "SQ BLUE F-14B" } )
+		BLUEA2ADispatcher:SetSquadronOverhead( "Tomcat", 1 )
+		BLUEA2ADispatcher:SetSquadronGrouping( "Tomcat", 2 )
+		BLUEA2ADispatcher:SetSquadronTakeoffFromParkingHot( "Tomcat" )		
+		BLUEA2ADispatcher:SetSquadronLandingAtRunway( "Tomcat" )
 			
-		--//CAPZoneBlueCarrier = ZONE_GROUP:New("CAP Zone Carrier", GROUP:FindByName( "CVN-74 John C. Stennis" ), 20000)
-		--//BLUEA2ADispatcher:SetSquadronCap( "Tomcat", CAPZoneBlueCarrier, 3000, 11000, 768, 905, 800, 1200, "BARO" )
-		--//BLUEA2ADispatcher:SetSquadronCapInterval( "Tomcat", 1, 150, 600, 1 )	
-	--//end
+		CAPZoneBlueCarrier = ZONE_GROUP:New("CAP Zone Carrier", GROUP:FindByName( "CVN-74 John C. Stennis" ), 20000)
+		BLUEA2ADispatcher:SetSquadronCap( "Tomcat", CAPZoneBlueCarrier, 3000, 11000, 768, 905, 800, 1200, "BARO" )
+		BLUEA2ADispatcher:SetSquadronCapInterval( "Tomcat", 1, 150, 600, 1 )	
+	end
 	
-	--//trigger.action.outText("Fleet Defence Tomcats Are Now Enabled", 15)
-	--///missionCommands.removeItemForCoalition(coalition.side.BLUE, {[1] = "Clear Field Options", [2] = "Clear Field CAP Options", [3] = "Enable Fleet Tomcats"})
-	--//missionCommands.removeItemForCoalition(coalition.side.BLUE, {[1] = "Clear Field Options", [2] = "Clear Field CAP Options", [3] = "Enable Fleet Hornets"})	
---//end
+	trigger.action.outText("Fleet Defence Tomcats Are Now Enabled", 15)
+	missionCommands.removeItemForCoalition(coalition.side.BLUE, {[1] = "Clear Field Options", [2] = "Clear Field CAP Options", [3] = "Enable Fleet Tomcats"})
+	missionCommands.removeItemForCoalition(coalition.side.BLUE, {[1] = "Clear Field Options", [2] = "Clear Field CAP Options", [3] = "Enable Fleet Hornets"})	
+end
 
---//function SEF_FleetHornets()
+function SEF_FleetHornets()
 		
-	--//if ( GameMode == 0 ) then
+	if ( GameMode == 0 ) then
 		--////CARRIER GROUP HORNETS MULTIPLAYER SETTINGS
-		--//BLUEA2ADispatcher:SetSquadron( "Hornet", "CVN-74 John C. Stennis", { "SQ BLUE F/A-18C" } )
-		--//BLUEA2ADispatcher:SetSquadronOverhead( "Hornet", 1 )
-		--//BLUEA2ADispatcher:SetSquadronGrouping( "Hornet", 2 )
-		--//BLUEA2ADispatcher:SetSquadronTakeoffInAir( "Hornet" )
-		--/BLUEA2ADispatcher:SetSquadronLandingAtRunway( "Hornet" )
+		BLUEA2ADispatcher:SetSquadron( "Hornet", "CVN-74 John C. Stennis", { "SQ BLUE F/A-18C" } )
+		BLUEA2ADispatcher:SetSquadronOverhead( "Hornet", 1 )
+		BLUEA2ADispatcher:SetSquadronGrouping( "Hornet", 2 )
+		BLUEA2ADispatcher:SetSquadronTakeoffInAir( "Hornet" )
+		BLUEA2ADispatcher:SetSquadronLandingAtRunway( "Hornet" )
 		
-		--//CAPZoneBlueCarrier = ZONE_GROUP:New("CAP Zone Carrier", GROUP:FindByName( "CVN-74 John C. Stennis" ), 20000)
-		--//BLUEA2ADispatcher:SetSquadronCap( "Hornet", CAPZoneBlueCarrier, 3000, 11000, 743, 867, 800, 1200, "BARO" )
-		--//BLUEA2ADispatcher:SetSquadronCapInterval( "Hornet", 1, 150, 600, 1 )
-	--//else
+		CAPZoneBlueCarrier = ZONE_GROUP:New("CAP Zone Carrier", GROUP:FindByName( "CVN-74 John C. Stennis" ), 20000)
+		BLUEA2ADispatcher:SetSquadronCap( "Hornet", CAPZoneBlueCarrier, 3000, 11000, 743, 867, 800, 1200, "BARO" )
+		BLUEA2ADispatcher:SetSquadronCapInterval( "Hornet", 1, 150, 600, 1 )
+	else
 		--////CARRIER GROUP HORNETS SINGLEPLAYER SETTINGS
-		--//BLUEA2ADispatcher:SetSquadron( "Hornet", "CVN-74 John C. Stennis", { "SQ BLUE F/A-18C" } )
-		--//BLUEA2ADispatcher:SetSquadronOverhead( "Hornet", 1 )
-		--//BLUEA2ADispatcher:SetSquadronGrouping( "Hornet", 2 )
-		--//BLUEA2ADispatcher:SetSquadronTakeoffFromParkingHot( "Hornet" )		
-		--//BLUEA2ADispatcher:SetSquadronLandingAtRunway( "Hornet" )
+		BLUEA2ADispatcher:SetSquadron( "Hornet", "CVN-74 John C. Stennis", { "SQ BLUE F/A-18C" } )
+		BLUEA2ADispatcher:SetSquadronOverhead( "Hornet", 1 )
+		BLUEA2ADispatcher:SetSquadronGrouping( "Hornet", 2 )
+		BLUEA2ADispatcher:SetSquadronTakeoffFromParkingHot( "Hornet" )		
+		BLUEA2ADispatcher:SetSquadronLandingAtRunway( "Hornet" )
 		
-		--//CAPZoneBlueCarrier = ZONE_GROUP:New("CAP Zone Carrier", GROUP:FindByName( "CVN-74 John C. Stennis" ), 20000)
-		--//BLUEA2ADispatcher:SetSquadronCap( "Hornet", CAPZoneBlueCarrier, 3000, 11000, 743, 867, 800, 1200, "BARO" )
-		--//BLUEA2ADispatcher:SetSquadronCapInterval( "Hornet", 1, 150, 600, 1 )	
-	--//end
+		CAPZoneBlueCarrier = ZONE_GROUP:New("CAP Zone Carrier", GROUP:FindByName( "CVN-74 John C. Stennis" ), 20000)
+		BLUEA2ADispatcher:SetSquadronCap( "Hornet", CAPZoneBlueCarrier, 3000, 11000, 743, 867, 800, 1200, "BARO" )
+		BLUEA2ADispatcher:SetSquadronCapInterval( "Hornet", 1, 150, 600, 1 )	
+	end
 	
-	--//trigger.action.outText("Fleet Defence Hornets Are Now Enabled", 15)
-	--//missionCommands.removeItemForCoalition(coalition.side.BLUE, {[1] = "Clear Field Options", [2] = "Clear Field CAP Options", [3] = "Enable Fleet Tomcats"})
-	--//missionCommands.removeItemForCoalition(coalition.side.BLUE, {[1] = "Clear Field Options", [2] = "Clear Field CAP Options", [3] = "Enable Fleet Hornets"})	
---//end
+	trigger.action.outText("Fleet Defence Hornets Are Now Enabled", 15)
+	missionCommands.removeItemForCoalition(coalition.side.BLUE, {[1] = "Clear Field Options", [2] = "Clear Field CAP Options", [3] = "Enable Fleet Tomcats"})
+	missionCommands.removeItemForCoalition(coalition.side.BLUE, {[1] = "Clear Field Options", [2] = "Clear Field CAP Options", [3] = "Enable Fleet Hornets"})	
+end
 
 --////RED AIR DEFENCE
 function SEF_REDDISPATCHERON()
@@ -137,15 +137,10 @@ function SEF_REDDISPATCHERON()
 	--REDA2ADispatcher:SetDefaultDamageThreshold( 0.60 )
 	REDA2ADispatcher:SetDefaultCapLimit( 1 )
 	REDA2ADispatcher:SetDefaultTakeoffInAirAltitude(3000)
-	--REDA2ADispatcher:SetDefaultTakeoffFromParkingHot("Alpha")
-	--REDA2ADispatcher:SetDefaultTakeoffFromParkingHot("Beta")
-	--REDA2ADispatcher:SetDefaultTakeoffFromParkingHot("Gamma")
-	--REDA2ADispatcher:SetDefaultTakeoffFromParkingHot("Delta")
-	--REDA2ADispatcher:SetDefaultTakeoffFromParkingHot("Theta")
-	--REDA2ADispatcher:SetDefaultTakeoffFromParkingHot("Omicron")
 
-	REDA2ADispatcher:SetEngageRadius( 200000 )	
-	REDA2ADispatcher:SetDisengageRadius( 260000 )
+	REDA2ADispatcher:SetEngageRadius( 80000 )	
+	REDA2ADispatcher:SetDisengageRadius( 90000 )
+	--REDA2ADispatcher:SetGciRadius( 100000 )
 	
 	--trigger.action.outText("Red Air Dispatcher Is Now Enabled", 15)
 end
@@ -204,34 +199,34 @@ function SEF_REDSQUADRONSMULTIPLAYER()
 
 	-- ////CAP Squadrons
 	-- Guaduta - Zone 1
-	REDA2ADispatcher:SetSquadron( "Alpha", AIRBASE.Caucasus.Gudauta, { "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-21Bis", "SQ RUS MiG-23MLD" } )
+	REDA2ADispatcher:SetSquadron( "Alpha", AIRBASE.Caucasus.Gudauta, { "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-23MLD" } )
 	-- Nalchik - Zone 2
-	REDA2ADispatcher:SetSquadron( "Beta", AIRBASE.Caucasus.Nalchik, { "SQ RUS Su-27", "SQ RUS MiG-21Bis", "SQ RUS MiG-25PD" } )
+	REDA2ADispatcher:SetSquadron( "Beta", AIRBASE.Caucasus.Nalchik, { "SQ RUS Su-27" } )
 	-- Beslan - Zone 3
-	REDA2ADispatcher:SetSquadron( "Gamma", AIRBASE.Caucasus.Beslan, { "SQ RUS Su-27", "SQ RUS Su-30", "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-21Bis", "SQ RUS MiG-23MLD", "SQ RUS MiG-25PD" } )
+	REDA2ADispatcher:SetSquadron( "Gamma", AIRBASE.Caucasus.Beslan, { "SQ RUS Su-27", "SQ RUS Su-30", "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-23MLD" } )
 	-- Sochi - Zone 4
-	REDA2ADispatcher:SetSquadron( "Delta", AIRBASE.Caucasus.Sochi_Adler, { "SQ RUS Su-27", "SQ RUS Su-30", "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-21Bis", "SQ RUS MiG-23MLD", "SQ RUS MiG-25PD" } )
+	REDA2ADispatcher:SetSquadron( "Delta", AIRBASE.Caucasus.Sochi_Adler, { "SQ RUS Su-27", "SQ RUS Su-30", "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-23MLD" } )
 	--Admiral Kuznetsov
 	REDA2ADispatcher:SetSquadron( "Theta", "CV 1143.5 Admiral Kuznetsov", { "SQ RUS Su-33 Kuznetsov" } )
 	-- Mineralnye-Vody - Zone 6
-	REDA2ADispatcher:SetSquadron( "Omicron", AIRBASE.Caucasus.Mineralnye_Vody, { "SQ RUS MiG-31", "SQ RUS MiG-25PD", "SQ RUS MiG-21Bis", "SQ RUS Su-27", "SQ RUS Su-30", "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-23MLD" } )
+	REDA2ADispatcher:SetSquadron( "Omicron", AIRBASE.Caucasus.Mineralnye_Vody, { "SQ RUS MiG-31", "SQ RUS Su-27", "SQ RUS Su-30", "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-23MLD" } )
 
 
 	--////SQUADRON OVERHEAD (1.0-1.5)
-	REDA2ADispatcher:SetSquadronOverhead( "Alpha", 1.0)
-	REDA2ADispatcher:SetSquadronOverhead( "Beta", 1.0)
-	REDA2ADispatcher:SetSquadronOverhead( "Gamma", 1.0)
-	REDA2ADispatcher:SetSquadronOverhead( "Delta", 1.0)
-	REDA2ADispatcher:SetSquadronOverhead( "Theta", 1.0)
-	REDA2ADispatcher:SetSquadronOverhead( "Omicron", 1.0)
+	REDA2ADispatcher:SetSquadronOverhead( "Alpha", 0.5) 
+	REDA2ADispatcher:SetSquadronOverhead( "Beta", 0.5)
+	REDA2ADispatcher:SetSquadronOverhead( "Gamma", 0.5)
+	REDA2ADispatcher:SetSquadronOverhead( "Delta", 0.5)
+	REDA2ADispatcher:SetSquadronOverhead( "Theta", 0.5)
+	REDA2ADispatcher:SetSquadronOverhead( "Omicron", 0.5)
 
 	--////SQUADRON GROUPING
-	REDA2ADispatcher:SetSquadronGrouping( "Alpha", 2 )
-	REDA2ADispatcher:SetSquadronGrouping( "Beta", 2 )
-	REDA2ADispatcher:SetSquadronGrouping( "Gamma", 2 )
-	REDA2ADispatcher:SetSquadronGrouping( "Delta", 2 )
-	REDA2ADispatcher:SetSquadronGrouping( "Theta", 2 )
-	REDA2ADispatcher:SetSquadronGrouping( "Omicron", 2 )
+	--REDA2ADispatcher:SetSquadronGrouping( "Alpha", 2 )
+	--REDA2ADispatcher:SetSquadronGrouping( "Beta", 2 )
+	--REDA2ADispatcher:SetSquadronGrouping( "Gamma", 2 )
+	--REDA2ADispatcher:SetSquadronGrouping( "Delta", 2 )
+	--REDA2ADispatcher:SetSquadronGrouping( "Theta", 2 )
+	--REDA2ADispatcher:SetSquadronGrouping( "Omicron", 2 )
 
 	--////TAKEOFF	
 	--REDA2ADispatcher:SetSquadronTakeoffFromParkingHot( "Alpha" )
@@ -240,13 +235,6 @@ function SEF_REDSQUADRONSMULTIPLAYER()
 	--REDA2ADispatcher:SetSquadronTakeoffFromParkingHot( "Delta" )
 	--REDA2ADispatcher:SetSquadronTakeoffFromParkingHot( "Theta" )
 	--REDA2ADispatcher:SetSquadronTakeoffFromParkingHot( "Omicron" )
-	
-	--REDA2ADispatcher:SetSquadronTakeoffFromParkingCold( "Alpha" )
-	--REDA2ADispatcher:SetSquadronTakeoffFromParkingCold( "Beta" )
-	--REDA2ADispatcher:SetSquadronTakeoffFromParkingCold( "Gamma" )
-	--REDA2ADispatcher:SetSquadronTakeoffFromParkingCold( "Delta" )
-	--REDA2ADispatcher:SetSquadronTakeoffFromParkingCold( "Theta" )
-	--REDA2ADispatcher:SetSquadronTakeoffFromParkingCold( "Omicron" )
 	
 	--REDA2ADispatcher:SetSquadronTakeoffFromRunway( "Alpha" )
 	--REDA2ADispatcher:SetSquadronTakeoffFromRunway( "Beta" )
@@ -277,9 +265,9 @@ function SEF_REDSQUADRONSMULTIPLAYER()
 	CAPZoneRed2 = ZONE:New( "CAP Zone RED 2")
 	CAPZoneRed3 = ZONE:New( "CAP Zone RED 3")
 	CAPZoneRed4 = ZONE:New( "CAP Zone RED 4" )
-	--CAPZoneRed5 = ZONE:New( "CAP Zone RED Kuznetsov" )
-	CAPZoneRedCarrier = ZONE_GROUP:New("CAP Zone Black Sea Fleet", GROUP:FindByName( "CV 1143.5 Admiral Kuznetsov" ), 75000)
-	CAPZoneRed6 = ZONE_POLYGON:New( "CAP Zone RED 6", GROUP:FindByName( "CAP Zone RED 6" ) )
+	CAPZoneRed5 = ZONE:New( "CAP Zone RED Kuznetsov" )
+	--CAPZoneRedCarrier = ZONE_GROUP:New("CAP Zone Black Sea Fleet", GROUP:FindByName( "CV 1143.5 Admiral Kuznetsov" ), 75000)
+	CAPZoneRed6 = ZONE:New( "CAP Zone RED 6" )
 
 	-- ZONE 1 Gudauta 			- Alpha
 	-- ZONE 2 Nalchik 			- Beta
@@ -289,25 +277,26 @@ function SEF_REDSQUADRONSMULTIPLAYER()
 	-- ZONE 6 Mineralnye-Vody 	- Omicron
 	
 	--Timing Originally 300/750
-
+	
 	--ZONE 1 / Alpha / Gudauta
-	REDA2ADispatcher:SetSquadronCap( "Alpha", CAPZoneRed1, 1000, 11000, 750, 900, 800, 1200, "BARO" )
-	REDA2ADispatcher:SetSquadronCapInterval( "Alpha", 1, 480, 3000, 1 )
+	--REDA2ADispatcher:SetSquadronCap( "Alpha", CAPZoneRed1, 1000, 11000, 750, 900, 800, 1200, "BARO" )  
+	--REDA2ADispatcher:SetSquadronCapInterval( "Alpha", 1, 30, 31, 1 )
 	--ZONE 2 / Beta / Nalchik
-	REDA2ADispatcher:SetSquadronCap( "Beta", CAPZoneRed2, 4000, 11000, 750, 900, 800, 1200, "BARO" )
-	REDA2ADispatcher:SetSquadronCapInterval( "Beta", 1, 480, 3000, 1 )
+	--REDA2ADispatcher:SetSquadronCap( "Beta", CAPZoneRed2, 4000, 11000, 750, 900, 800, 1200, "BARO" )
+	--REDA2ADispatcher:SetSquadronCapInterval( "Beta", 1, 30, 31, 1 )
 	--ZONE 3 / Gamma / Beslan
-	REDA2ADispatcher:SetSquadronCap( "Gamma", CAPZoneRed3, 4000, 11000, 750, 900, 800, 1200, "BARO" )
-	REDA2ADispatcher:SetSquadronCapInterval( "Gamma", 1, 480, 3000, 1 )  
+	--REDA2ADispatcher:SetSquadronCap( "Gamma", CAPZoneRed3, 4000, 11000, 750, 900, 800, 1200, "BARO" )
+	--REDA2ADispatcher:SetSquadronCapInterval( "Gamma", 1, 30, 31, 1 )  
 	--ZONE 4 / Delta / Sochi
-	REDA2ADispatcher:SetSquadronCap( "Delta", CAPZoneRed4, 1000, 11000, 750, 900, 800, 1200, "BARO" )
-	REDA2ADispatcher:SetSquadronCapInterval( "Delta", 1, 480, 3000, 1 )
+	--REDA2ADispatcher:SetSquadronCap( "Delta", CAPZoneRed4, 1000, 11000, 750, 900, 800, 1200, "BARO" )
+	--REDA2ADispatcher:SetSquadronCapInterval( "Delta", 1, 30, 31, 1 )
 	--ZONE 5 / Theta / Admiral Kuznetsov
-	REDA2ADispatcher:SetSquadronCap( "Theta", CAPZoneRedCarrier, 1000, 11000, 750, 900, 800, 1200, "BARO" )
-	REDA2ADispatcher:SetSquadronCapInterval( "Theta", 1, 480, 3000, 1 )
+	--REDA2ADispatcher:SetSquadronCap( "Theta", CAPZoneRed5, 1000, 11000, 750, 900, 800, 1200, "BARO" )
+	--REDA2ADispatcher:SetSquadronCapInterval( "Theta", 1, 30, 31, 1 )
 	--ZONE 6 / Omicron / Mineralnye-Vody
-	REDA2ADispatcher:SetSquadronCap( "Omicron", CAPZoneRed6, 4000, 11000, 750, 900, 800, 1200, "BARO" )
-	REDA2ADispatcher:SetSquadronCapInterval( "Omicron", 1, 480, 3000, 1 )	
+	--REDA2ADispatcher:SetSquadronCap( "Omicron", CAPZoneRed6, 4000, 11000, 750, 900, 800, 1200, "BARO" )
+	--REDA2ADispatcher:SetSquadronCapInterval( "Omicron", 1, 30, 31, 1 )
+	
 end
 
 function SEF_REDSQUADRONSSINGLEPLAYER()
@@ -364,17 +353,17 @@ function SEF_REDSQUADRONSSINGLEPLAYER()
 
 	-- ////CAP Squadrons
 	-- Guaduta - Zone 1
-	REDA2ADispatcher:SetSquadron( "Alpha", AIRBASE.Caucasus.Gudauta, { "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-21Bis", "SQ RUS MiG-23MLD" } )
+	REDA2ADispatcher:SetSquadron( "Alpha", AIRBASE.Caucasus.Gudauta, { "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-23MLD" } )
 	-- Nalchik - Zone 2
-	REDA2ADispatcher:SetSquadron( "Beta", AIRBASE.Caucasus.Nalchik, { "SQ RUS Su-27", "SQ RUS MiG-21Bis", "SQ RUS MiG-25PD" } )
+	REDA2ADispatcher:SetSquadron( "Beta", AIRBASE.Caucasus.Nalchik, { "SQ RUS Su-27" } )
 	-- Beslan - Zone 3
-	REDA2ADispatcher:SetSquadron( "Gamma", AIRBASE.Caucasus.Beslan, { "SQ RUS Su-27", "SQ RUS Su-30", "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-21Bis", "SQ RUS MiG-23MLD", "SQ RUS MiG-25PD" } )
+	REDA2ADispatcher:SetSquadron( "Gamma", AIRBASE.Caucasus.Beslan, { "SQ RUS Su-27", "SQ RUS Su-30", "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-23MLD" } )
 	-- Sochi - Zone 4
-	REDA2ADispatcher:SetSquadron( "Delta", AIRBASE.Caucasus.Sochi_Adler, { "SQ RUS Su-27", "SQ RUS Su-30", "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-21Bis", "SQ RUS MiG-23MLD", "SQ RUS MiG-25PD" } )
+	REDA2ADispatcher:SetSquadron( "Delta", AIRBASE.Caucasus.Sochi_Adler, { "SQ RUS Su-27", "SQ RUS Su-30", "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-23MLD" } )
 	--Admiral Kuznetsov
 	REDA2ADispatcher:SetSquadron( "Theta", "CV 1143.5 Admiral Kuznetsov", { "SQ RUS Su-33 Kuznetsov" } )
 	-- Mineralnye-Vody - Zone 6
-	REDA2ADispatcher:SetSquadron( "Omicron", AIRBASE.Caucasus.Mineralnye_Vody, { "SQ RUS MiG-31", "SQ RUS MiG-25PD", "SQ RUS MiG-21Bis", "SQ RUS Su-27", "SQ RUS Su-30", "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-23MLD" } )
+	REDA2ADispatcher:SetSquadron( "Omicron", AIRBASE.Caucasus.Mineralnye_Vody, { "SQ RUS MiG-31", "SQ RUS Su-27", "SQ RUS Su-30", "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-23MLD" } )
 
 
 
@@ -395,26 +384,19 @@ function SEF_REDSQUADRONSSINGLEPLAYER()
 	REDA2ADispatcher:SetSquadronGrouping( "Omicron", 2 )
 
 	--////TAKEOFF	
-	REDA2ADispatcher:SetSquadronTakeoffFromParkingHot( "Alpha" )
-	REDA2ADispatcher:SetSquadronTakeoffFromParkingHot( "Beta" )
-	REDA2ADispatcher:SetSquadronTakeoffFromParkingHot( "Gamma" )
-	REDA2ADispatcher:SetSquadronTakeoffFromParkingHot( "Delta" )
-	REDA2ADispatcher:SetSquadronTakeoffFromParkingHot( "Theta" )
-	REDA2ADispatcher:SetSquadronTakeoffFromParkingHot( "Omicron" )
+	--REDA2ADispatcher:SetSquadronTakeoffFromParkingHot( "Alpha" )
+	--REDA2ADispatcher:SetSquadronTakeoffFromParkingHot( "Beta" )
+	--REDA2ADispatcher:SetSquadronTakeoffFromParkingHot( "Gamma" )
+	--REDA2ADispatcher:SetSquadronTakeoffFromParkingHot( "Delta" )
+	--REDA2ADispatcher:SetSquadronTakeoffFromParkingHot( "Theta" )
+	--REDA2ADispatcher:SetSquadronTakeoffFromParkingHot( "Omicron" )
 	
-	--REDA2ADispatcher:SetSquadronTakeoffFromParkingCold( "Alpha" )
-	--REDA2ADispatcher:SetSquadronTakeoffFromParkingCold( "Beta" )
-	--REDA2ADispatcher:SetSquadronTakeoffFromParkingCold( "Gamma" )
-	--REDA2ADispatcher:SetSquadronTakeoffFromParkingCold( "Delta" )
-	--REDA2ADispatcher:SetSquadronTakeoffFromParkingCold( "Theta" )
-	--REDA2ADispatcher:SetSquadronTakeoffFromParkingCold( "Omicron" )
-	
-	--REDA2ADispatcher:SetSquadronTakeoffFromRunway( "Alpha" )
-	--REDA2ADispatcher:SetSquadronTakeoffFromRunway( "Beta" )
-	--REDA2ADispatcher:SetSquadronTakeoffFromRunway( "Gamma" )
-	--REDA2ADispatcher:SetSquadronTakeoffFromRunway( "Delta" )
-	--REDA2ADispatcher:SetSquadronTakeoffFromRunway( "Theta" )
-	--REDA2ADispatcher:SetSquadronTakeoffInAir( "Omicron" )
+	REDA2ADispatcher:SetSquadronTakeoffFromRunway( "Alpha" )
+	REDA2ADispatcher:SetSquadronTakeoffFromRunway( "Beta" )
+	REDA2ADispatcher:SetSquadronTakeoffFromRunway( "Gamma" )
+	REDA2ADispatcher:SetSquadronTakeoffFromRunway( "Delta" )
+	REDA2ADispatcher:SetSquadronTakeoffFromRunway( "Theta" )
+	REDA2ADispatcher:SetSquadronTakeoffInAir( "Omicron" )
 		
 	--REDA2ADispatcher:SetSquadronTakeoffInAir( "Alpha" )
 	--REDA2ADispatcher:SetSquadronTakeoffInAir( "Beta" )
@@ -451,22 +433,22 @@ function SEF_REDSQUADRONSSINGLEPLAYER()
 
 	--ZONE 1 / Alpha / Gudauta
 	REDA2ADispatcher:SetSquadronCap( "Alpha", CAPZoneRed1, 1000, 11000, 750, 900, 800, 1200, "BARO" )
-	REDA2ADispatcher:SetSquadronCapInterval( "Alpha", 1, 450, 900, 1 )
+	REDA2ADispatcher:SetSquadronCapInterval( "Alpha", 1, 300, 900, 1 )
 	--ZONE 2 / Beta / Nalchik
 	REDA2ADispatcher:SetSquadronCap( "Beta", CAPZoneRed2, 4000, 11000, 750, 900, 800, 1200, "BARO" )
-	REDA2ADispatcher:SetSquadronCapInterval( "Beta", 1, 450, 900, 1 )
+	REDA2ADispatcher:SetSquadronCapInterval( "Beta", 1, 300, 900, 1 )
 	--ZONE 3 / Gamma / Beslan
 	REDA2ADispatcher:SetSquadronCap( "Gamma", CAPZoneRed3, 4000, 11000, 750, 900, 800, 1200, "BARO" )
-	REDA2ADispatcher:SetSquadronCapInterval( "Gamma", 1, 450, 900, 1 )  
+	REDA2ADispatcher:SetSquadronCapInterval( "Gamma", 1, 300, 900, 1 )  
 	--ZONE 4 / Delta / Sochi
 	REDA2ADispatcher:SetSquadronCap( "Delta", CAPZoneRed4, 1000, 11000, 750, 900, 800, 1200, "BARO" )
-	REDA2ADispatcher:SetSquadronCapInterval( "Delta", 1, 450, 900, 1 )
+	REDA2ADispatcher:SetSquadronCapInterval( "Delta", 1, 300, 900, 1 )
 	--ZONE 5 / Theta / Admiral Kuznetsov
 	REDA2ADispatcher:SetSquadronCap( "Theta", CAPZoneRedCarrier, 1000, 11000, 750, 900, 800, 1200, "BARO" )
-	REDA2ADispatcher:SetSquadronCapInterval( "Theta", 1, 450, 900, 1 )
+	REDA2ADispatcher:SetSquadronCapInterval( "Theta", 1, 300, 900, 1 )
 	--ZONE 6 / Omicron / Mineralnye-Vody
 	REDA2ADispatcher:SetSquadronCap( "Omicron", CAPZoneRed6, 4000, 11000, 750, 900, 800, 1200, "BARO" )
-	REDA2ADispatcher:SetSquadronCapInterval( "Omicron", 1, 450, 900, 1 )
+	REDA2ADispatcher:SetSquadronCapInterval( "Omicron", 1, 300, 900, 1 )
 	
 end
 
@@ -487,8 +469,7 @@ end
 function SEF_BLUEDEFENCENETWORK()
 	--////ADD TO DEFENCE NETWORK
 	BLUEDetectionSetGroup:AddGroupsByName( { 	"CVN-74 John C. Stennis",
-												"Georgian Fleet",
-												"LHA-1 Tarawa"										
+												"Georgian Fleet"
 												--"Senaki Kolkhi - SA-11",
 												--"Poti - SA-3",
 												--"Tbilisi Lochini - SA-3"
@@ -555,6 +536,7 @@ function SEF_AIRFIELDPERIMETERZONES()
 	NalchikPerimeterZone 		= ZONE:New("Nalchik Perimeter")
 	BeslanPerimeterZone 		= ZONE:New("Beslan Perimeter")
 	--KuznetsovPerimeterZone	= CAPZoneRedCarrier	
+	ServerWide 					= ZONE:New("Server Perimeter")
 end
 
 function SEF_AIRFIELDPERIMETERCLIENTS()
@@ -567,7 +549,8 @@ function SEF_AIRFIELDPERIMETERZONECLIENTSCANNER(Timeloop, time)
 	SochiPerimeterCount 		= 0
 	NalchikPerimeterCount 		= 0
 	BeslanPerimeterCount 		= 0
-	KuznetsovPerimeterCount		= 0
+	--KuznetsovPerimeterCount		= 0
+	ServerCount					= 0
 	
 	--////Count Clients Inside Airfield Perimeter Zones
 	SET_AIRFIELDPERIMETERCLIENTS:ForEachClientInZone(GudautaPerimeterZone, function ( GroupObject )
@@ -586,51 +569,90 @@ function SEF_AIRFIELDPERIMETERZONECLIENTSCANNER(Timeloop, time)
 		BeslanPerimeterCount = BeslanPerimeterCount + 1
 		end
 	)
-	SET_AIRFIELDPERIMETERCLIENTS:ForEachClientInZone(CAPZoneRedCarrier, function ( GroupObject )
-		KuznetsovPerimeterCount = KuznetsovPerimeterCount + 1
+	--SET_AIRFIELDPERIMETERCLIENTS:ForEachClientInZone(CAPZoneRedCarrier, function ( GroupObject )
+		--KuznetsovPerimeterCount = KuznetsovPerimeterCount + 1
+		--end
+	--)
+	SET_AIRFIELDPERIMETERCLIENTS:ForEachClientInZone(ServerWide, function ( GroupObject )
+		ServerCount = ServerCount + 1
 		end
 	)
 	
 	--////GUDAUTA			
 	if ( GudautaPerimeterCount > 0 ) then		
 		GudautaStatus = "Gudauta\nAirspace Is Being Contested By The Allies\n"
-		REDA2ADispatcher:SetSquadron( "Alpha", AIRBASE.Caucasus.Maykop_Khanskaya, { "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-21Bis", "SQ RUS MiG-23MLD" } )	
+		REDA2ADispatcher:SetSquadron( "Alpha", AIRBASE.Caucasus.Maykop_Khanskaya, { "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-23MLD" } )	
 	else
 		GudautaStatus = "Gudauta\nAirspace Is Controlled By Russia\n"
-		REDA2ADispatcher:SetSquadron( "Alpha", AIRBASE.Caucasus.Gudauta, { "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-21Bis", "SQ RUS MiG-23MLD" } )	
+		REDA2ADispatcher:SetSquadron( "Alpha", AIRBASE.Caucasus.Gudauta, { "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-23MLD" } )	
 	end
 	--////SOCHI
 	if ( SochiPerimeterCount > 0 ) then		
 		SochiStatus = "Sochi\nAirspace Is Being Contested By The Allies\n"		
-		REDA2ADispatcher:SetSquadron( "Delta", AIRBASE.Caucasus.Maykop_Khanskaya, { "SQ RUS Su-27", "SQ RUS Su-30", "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-21Bis", "SQ RUS MiG-23MLD", "SQ RUS MiG-25PD" } )	
+		REDA2ADispatcher:SetSquadron( "Delta", AIRBASE.Caucasus.Maykop_Khanskaya, { "SQ RUS Su-27", "SQ RUS Su-30", "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-23MLD" } )	
 	else
 		SochiStatus = "Sochi\nAirspace Is Controlled By Russia\n"
-		REDA2ADispatcher:SetSquadron( "Delta", AIRBASE.Caucasus.Sochi_Adler, { "SQ RUS Su-27", "SQ RUS Su-30", "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-21Bis", "SQ RUS MiG-23MLD", "SQ RUS MiG-25PD" } )	
+		REDA2ADispatcher:SetSquadron( "Delta", AIRBASE.Caucasus.Sochi_Adler, { "SQ RUS Su-27", "SQ RUS Su-30", "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-23MLD" } )	
 	end
 	--////NALCHIK
 	if ( NalchikPerimeterCount > 0 ) then		
 		NalchikStatus = "Nalchik\nAirspace Is Being Contested By The Allies\n"	
-		REDA2ADispatcher:SetSquadron( "Beta", AIRBASE.Caucasus.Mozdok, { "SQ RUS Su-27", "SQ RUS MiG-21Bis", "SQ RUS MiG-25PD" } )	
+		REDA2ADispatcher:SetSquadron( "Beta", AIRBASE.Caucasus.Mozdok, { "SQ RUS Su-27" } )	
 	else
 		NalchikStatus = "Nalchik\nAirspace Is Controlled By Russia\n"
-		REDA2ADispatcher:SetSquadron( "Beta", AIRBASE.Caucasus.Nalchik, { "SQ RUS Su-27", "SQ RUS MiG-21Bis", "SQ RUS MiG-25PD" } )	
+		REDA2ADispatcher:SetSquadron( "Beta", AIRBASE.Caucasus.Nalchik, { "SQ RUS Su-27" } )	
 	end
 	--////BESLAN
 	if ( BeslanPerimeterCount > 0 ) then		
 		BeslanStatus = "Beslan\nAirspace Is Being Contested By The Allies\n"		
-		REDA2ADispatcher:SetSquadron( "Gamma", AIRBASE.Caucasus.Mozdok, { "SQ RUS Su-27", "SQ RUS Su-30", "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-21Bis", "SQ RUS MiG-23MLD", "SQ RUS MiG-25PD" } )	
+		REDA2ADispatcher:SetSquadron( "Gamma", AIRBASE.Caucasus.Mozdok, { "SQ RUS Su-27", "SQ RUS Su-30", "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-23MLD" } )	
 	else
 		BeslanStatus = "Beslan\nAirspace Is Controlled By Russia\n"
-		REDA2ADispatcher:SetSquadron( "Gamma", AIRBASE.Caucasus.Beslan, { "SQ RUS Su-27", "SQ RUS Su-30", "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-21Bis", "SQ RUS MiG-23MLD", "SQ RUS MiG-25PD" } )	
+		REDA2ADispatcher:SetSquadron( "Gamma", AIRBASE.Caucasus.Beslan, { "SQ RUS Su-27", "SQ RUS Su-30", "SQ RUS MiG-29A", "SQ RUS MiG-29S", "SQ RUS MiG-23MLD" } )	
 	end
 	--////BLACK SEA FLEET
-	if ( KuznetsovPerimeterCount > 0 ) then		
-		KuznetsovStatus = "CV 1143.5 Admiral Kuznetsov\nAirspace Is Being Contested By The Allies\n"		
-		REDA2ADispatcher:SetSquadron( "Theta", AIRBASE.Caucasus.Gelendzhik, { "SQ RUS Su-33" } )	
+	--if ( KuznetsovPerimeterCount > 0 ) then		
+		--KuznetsovStatus = "CV 1143.5 Admiral Kuznetsov\nAirspace Is Being Contested By The Allies\n"		
+		--REDA2ADispatcher:SetSquadron( "Theta", AIRBASE.Caucasus.Gelendzhik, { "SQ RUS Su-33" } )	
+	--else
+		--KuznetsovStatus = "CV 1143.5 Admiral Kuznetsov\nAirspace Is Controlled By Russia"
+		--REDA2ADispatcher:SetSquadron( "Theta", "CV 1143.5 Admiral Kuznetsov", { "SQ RUS Su-33 Kuznetsov" } )	
+	--end
+	--///Server Count
+	if ( ServerCount > 5 ) then
+		REDA2ADispatcher:SetSquadronGrouping( "Gamma", 2 )
+		REDA2ADispatcher:SetSquadronGrouping( "Delta", 2 )
+		REDA2ADispatcher:SetSquadronGrouping( "Omicron", 2 )
+		
+		--ZONE 3 / Gamma / Beslan
+		REDA2ADispatcher:SetSquadronCap( "Gamma", CAPZoneRed3, 4000, 11000, 750, 900, 800, 1200, "BARO" )
+		REDA2ADispatcher:SetSquadronCapInterval( "Gamma", 1, 1000, 1500, 1 )  
+		--ZONE 4 / Delta / Sochi
+		REDA2ADispatcher:SetSquadronCap( "Delta", CAPZoneRed4, 1000, 11000, 750, 900, 800, 1200, "BARO" )
+		REDA2ADispatcher:SetSquadronCapInterval( "Delta", 1, 1000, 1500, 1 )
+		--ZONE 6 / Omicron / Mineralnye-Vody
+		REDA2ADispatcher:SetSquadronCap( "Omicron", CAPZoneRed6, 4000, 11000, 750, 900, 800, 1200, "BARO" )
+		REDA2ADispatcher:SetSquadronCapInterval( "Omicron", 1, 1000, 1500, 1 )
+		--trigger.action.outText("Client Count ="..ServerCount, 15)
 	else
-		KuznetsovStatus = "CV 1143.5 Admiral Kuznetsov\nAirspace Is Controlled By Russia"
-		REDA2ADispatcher:SetSquadron( "Theta", "CV 1143.5 Admiral Kuznetsov", { "SQ RUS Su-33 Kuznetsov" } )	
-	end	
+		REDA2ADispatcher:SetSquadronGrouping( "Alpha", 2 )
+		REDA2ADispatcher:SetSquadronGrouping( "Beta", 2 )
+		REDA2ADispatcher:SetSquadronGrouping( "Gamma", 0 )
+		REDA2ADispatcher:SetSquadronGrouping( "Delta", 0 )
+		REDA2ADispatcher:SetSquadronGrouping( "Theta", 2 )
+		REDA2ADispatcher:SetSquadronGrouping( "Omicron", 0 )
+		
+		--ZONE 1 / Alpha / Gudauta
+		REDA2ADispatcher:SetSquadronCap( "Alpha", CAPZoneRed1, 1000, 11000, 750, 900, 800, 1200, "BARO" )  
+		REDA2ADispatcher:SetSquadronCapInterval( "Alpha", 1, 1000, 1500, 1 )
+		--ZONE 2 / Beta / Nalchik
+		REDA2ADispatcher:SetSquadronCap( "Beta", CAPZoneRed2, 4000, 11000, 750, 900, 800, 1200, "BARO" )
+		REDA2ADispatcher:SetSquadronCapInterval( "Beta", 1, 1000, 1500, 1 )
+		--ZONE 5 / Theta / Admiral Kuznetsov
+		REDA2ADispatcher:SetSquadronCap( "Theta", CAPZoneRed5, 1000, 11000, 750, 900, 800, 1200, "BARO" )
+		REDA2ADispatcher:SetSquadronCapInterval( "Theta", 1, 1000, 1500, 1 )
+		--trigger.action.outText("Client Count ="..ServerCount, 15)
+	end
 	
 	--trigger.action.outText("Airfield Status Report".."\n\n"..GudautaStatus.."\n"..SochiStatus.."\n"..NalchikStatus.."\n"..BeslanStatus.."\n"..KuznetsovStatus, 10)
 	return time + 30	
@@ -641,6 +663,8 @@ end
 	--////MAIN
 			
 	--////GET THE GAME MODE SETUP (FLAG 10000 IN MISSION EDITOR TRIGGERS, 0 FOR MULTIPLAYER, 1 FOR SINGLEPLAYER)
+	
+	
 	GameMode = trigger.misc.getUserFlag(10000)	
 	
 	SEF_REDDISPATCHERON()
